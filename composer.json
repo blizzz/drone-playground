@@ -1,0 +1,18 @@
+{
+    "name": "blizzz/drone-playground",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Blizzz\\DronePlayground\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Arthur Schiwon",
+            "email": "blizzz@arthur-schiwon.de"
+        }
+    ],
+    "require": {
+        "gboddin/drone-php-client": "^0.7.3"
+    }
+}
