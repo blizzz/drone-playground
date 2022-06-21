@@ -13,6 +13,6 @@
         }
     ],
     "require": {
-        "gboddin/drone-php-client": "^0.7.3"
+        "guzzlehttp/guzzle": "^7.4"
     }
 }
