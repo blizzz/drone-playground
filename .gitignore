@@ -1,1 +1,4 @@
 /vendor/
+/.drone_api_key
+/.idea/
+/composer.lock
