@@ -40,8 +40,7 @@ foreach ($repoList as $repoItem) {
 		}
 
 		$lineBreak = strpos($buildItem['message'], "\n");
-		$title = substr($buildItem['message'],0, $lineBreak ?: 40);
-
+		$title = substr($buildItem['message'],0, min($lineBreak ?: 60, 60));
 		$title = str_replace(array("\r", "\n"), '', $title);
 		printf("\t- %d\t%s\t%s\n\t\t%s\n", $buildItem['number'], $buildItem['event'], $buildItem['status'], $title);
 	}
