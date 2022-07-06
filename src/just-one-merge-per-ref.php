@@ -73,8 +73,10 @@ foreach ($buildsToStop as $build) {
 	printf("%s\t%s\t=> %d\n", $build->repo, $build->ref, $build->number);
 
 	$endpoint = sprintf('api/repos/%s/builds/%d', $build->repo, $build->number);
-	$client->request('DELETE', DRONE_HOST . $endpoint, ['headers' => ['Authorization' => 'Bearer ' . $apiKey]]);
+	$promise = $client->requestAsync('DELETE', DRONE_HOST . $endpoint, ['headers' => ['Authorization' => 'Bearer ' . $apiKey]]);
 }
 
-
+if(isset($promise)) {
+	$promise->wait();
+}
 
